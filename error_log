@@ -1,0 +1,413 @@
+[20-Oct-2021 06:06:30 UTC] PHP Notice:  Constant PASSWORD_DEFAULT already defined in /home/ljholida/public_html/social.elonara.com/update_pass.php on line 17
+[23-Oct-2021 05:00:21 America/New_York] [2021-10-23 05:00:21] ELGG.CRITICAL: Exception at time 1634979621:
+ParseError: syntax error, unexpected 'echo' (T_ECHO) in /home/ljholida/public_html/social.elonara.com/mod/custom_index/views/default/custom_index/content.php:31
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/ViewsService.php(449): Elgg\ViewsService->renderViewFile('custom_index/co...', Array, 'default', true)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/lib/views.php(222): Elgg\ViewsService->renderView('custom_index/co...', Array, 'default')
+#2 /home/ljholida/public_html/social.elonara.com/mod/custom_index/views/default/resources/index.php(11): elgg_view('custom_index/co...', Array)
+#3 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/ViewsService.php(516): include('/home/ljholida/...')
+#4 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/ViewsService.php(449): Elgg\ViewsService->renderViewFile('resources/index', Array, 'default', true)
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/lib/views.php(404): Elgg\ViewsService->renderView('resources/index', Array)
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Router.php(280): elgg_view_resource('index', Array)
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Router.php(128): Elgg\Router->prepareResponse(Object(Elgg\Http\Request))
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Router.php(104): Elgg\Router->getResponse(Object(Elgg\Http\Request))
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(479): Elgg\Router->route(Object(Elgg\Http\Request))
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(360): Elgg\Application->run()
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(416): Elgg\Application::route(Object(Elgg\Http\Request))
+#12 /home/ljholida/public_html/social.elonara.com/index.php(8): Elgg\Application::index()
+#13 {main}
+ {"exception":"[object] (ParseError(code: 0): syntax error, unexpected 'echo' (T_ECHO) at /home/ljholida/public_html/social.elonara.com/mod/custom_index/views/default/custom_index/content.php:31)"} {"backtrace":[],"process_id":30505,"memory_peak_usage":"8.54 MB","memory_usage":"8 MB","url":"/","ip":"97.126.62.218","http_method":"GET","server":"social.elonara.com","referrer":"https://social.elonara.com/activity"}
+
+[23-Oct-2021 16:10:21 America/New_York] [2021-10-23 16:10:21] ELGG.ERROR: Exception at time 1635019821:
+PDOException: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#4 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1109): Doctrine\DBAL\Connection->getWrappedConnection()
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(160): Doctrine\DBAL\Connection->exec('SET SESSION sql...')
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(127): Elgg\Database->connect('readwrite')
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(108): Elgg\Database->setupConnections()
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/Select.php(14): Elgg\Database->getConnection('read')
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/ConfigTable.php(154): Elgg\Database\Select::fromTable('config')
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/BootService.php(98): Elgg\Database\ConfigTable->getAll()
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(99): Elgg\BootService->boot(Object(Elgg\Di\ServiceProvider))
+#12 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(47): Elgg\Application\BootHandler->bootServices()
+#13 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(215): Elgg\Application\BootHandler->__invoke()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(474): Elgg\Application->bootCore()
+#15 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(360): Elgg\Application->run()
+#16 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(416): Elgg\Application::route(Object(Elgg\Http\Request))
+#17 /home/ljholida/public_html/social.elonara.com/index.php(8): Elgg\Application::index()
+#18 {main}
+
+Next Doctrine\DBAL\Driver\PDOException: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:31
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1109): Doctrine\DBAL\Connection->getWrappedConnection()
+#4 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(160): Doctrine\DBAL\Connection->exec('SET SESSION sql...')
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(127): Elgg\Database->connect('readwrite')
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(108): Elgg\Database->setupConnections()
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/Select.php(14): Elgg\Database->getConnection('read')
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/ConfigTable.php(154): Elgg\Database\Select::fromTable('config')
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/BootService.php(98): Elgg\Database\ConfigTable->getAll()
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(99): Elgg\BootService->boot(Object(Elgg\Di\ServiceProvider))
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(47): Elgg\Application\BootHandler->bootServices()
+#12 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(215): Elgg\Application\BootHandler->__invoke()
+#13 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(474): Elgg\Application->bootCore()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(360): Elgg\Application->run()
+#15 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(416): Elgg\Application::route(Object(Elgg\Http\Request))
+#16 /home/ljholida/public_html/social.elonara.com/index.php(8): Elgg\Application::index()
+#17 {main}
+
+Next Doctrine\DBAL\Exception\ConnectionException: An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php:97
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php(172): Doctrine\DBAL\Driver\AbstractMySQLDriver->convertException('An exception oc...', Object(Doctrine\DBAL\Driver\PDOException))
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php(159): Doctrine\DBAL\DBALException::wrapException(Object(Doctrine\DBAL\Driver\PDOMySql\Driver), Object(Doctrine\DBAL\Driver\PDOException), 'An exception oc...')
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(28): Doctrine\DBAL\DBALException::driverException(Object(Doctrine\DBAL\Driver\PDOMySql\Driver), Object(Doctrine\DBAL\Driver\PDOException))
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#4 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#5 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1109): Doctrine\DBAL\Connection->getWrappedConnection()
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(160): Doctrine\DBAL\Connection->exec('SET SESSION sql...')
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(127): Elgg\Database->connect('readwrite')
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(108): Elgg\Database->setupConnections()
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/Select.php(14): Elgg\Database->getConnection('read')
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/ConfigTable.php(154): Elgg\Database\Select::fromTable('config')
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/BootService.php(98): Elgg\Database\ConfigTable->getAll()
+#12 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(99): Elgg\BootService->boot(Object(Elgg\Di\ServiceProvider))
+#13 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(47): Elgg\Application\BootHandler->bootServices()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(215): Elgg\Application\BootHandler->__invoke()
+#15 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(474): Elgg\Application->bootCore()
+#16 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(360): Elgg\Application->run()
+#17 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(416): Elgg\Application::route(Object(Elgg\Http\Request))
+#18 /home/ljholida/public_html/social.elonara.com/index.php(8): Elgg\Application::index()
+#19 {main}
+ {"exception":"[object] (Doctrine\\DBAL\\Exception\\ConnectionException(code: 0): An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php:97, Doctrine\\DBAL\\Driver\\PDOException(code: 1045): SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:31, PDOException(code: 1045): SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27)"} {"backtrace":["[#11] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php:108","[#10] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/Select.php:14","[#9] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/ConfigTable.php:154","[#8] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/BootService.php:98","[#7] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php:99","[#6] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php:47","[#5] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php:215","[#4] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php:474","[#3] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php:360","[#2] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php:416","[#1] /home/ljholida/public_html/social.elonara.com/index.php:8"],"process_id":20484,"memory_peak_usage":"2 MB","memory_usage":"2 MB","url":"/pages/view/58/scope","ip":"97.126.62.218","http_method":"GET","server":"social.elonara.com","referrer":"https://social.elonara.com/pages/view/61/elonara-big-picture"}
+
+[23-Oct-2021 16:10:21 America/New_York] [2021-10-23 16:10:21] ELGG.CRITICAL: Exception at time 1635019821:
+DatabaseException: Elgg couldn't connect to the database using the given credentials. Check the settings file. in /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php:171
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(127): Elgg\Database->connect('readwrite')
+#1 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(108): Elgg\Database->setupConnections()
+#2 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/Select.php(14): Elgg\Database->getConnection('read')
+#3 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/ConfigTable.php(154): Elgg\Database\Select::fromTable('config')
+#4 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/BootService.php(98): Elgg\Database\ConfigTable->getAll()
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(99): Elgg\BootService->boot(Object(Elgg\Di\ServiceProvider))
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(47): Elgg\Application\BootHandler->bootServices()
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(215): Elgg\Application\BootHandler->__invoke()
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(474): Elgg\Application->bootCore()
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(360): Elgg\Application->run()
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(416): Elgg\Application::route(Object(Elgg\Http\Request))
+#11 /home/ljholida/public_html/social.elonara.com/index.php(8): Elgg\Application::index()
+#12 {main}
+ {"exception":"[object] (DatabaseException(code: 0): Elgg couldn't connect to the database using the given credentials. Check the settings file. at /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php:171)","sql":null,"params":null} {"backtrace":[],"process_id":20484,"memory_peak_usage":"2 MB","memory_usage":"2 MB","url":"/pages/view/58/scope","ip":"97.126.62.218","http_method":"GET","server":"social.elonara.com","referrer":"https://social.elonara.com/pages/view/61/elonara-big-picture"}
+
+[23-Oct-2021 16:10:21 America/New_York] [2021-10-23 16:10:21] ELGG.NOTICE: failsafe/messages/exceptions/exception view does not exist.  {"process_id":20484,"memory_peak_usage":"2 MB","memory_usage":"2 MB","url":"/pages/view/58/scope","ip":"97.126.62.218","http_method":"GET","server":"social.elonara.com","referrer":"https://social.elonara.com/pages/view/61/elonara-big-picture"}
+
+[23-Oct-2021 16:10:21 America/New_York] [2021-10-23 16:10:21] ELGG.CRITICAL: Exception at time 1635019821:
+PDOException: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#4 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(892): Doctrine\DBAL\Connection->getWrappedConnection()
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(441): Doctrine\DBAL\Connection->executeQuery('SELECT *\n\t\t\tFRO...', Array)
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(490): Elgg\Database->Elgg\{closure}()
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(446): Elgg\Database->trackQuery('SELECT *\n\t\t\tFRO...', Array, Object(Closure))
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(388): Elgg\Database->executeQuery('SELECT *\n\t\t\tFRO...', Object(Doctrine\DBAL\Connection), Array)
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(211): Elgg\Database->getResults('SELECT *\n\t\t\tFRO...', NULL, true, Array)
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Http/DatabaseSessionHandler.php(45): Elgg\Database->getDataRow('SELECT *\n\t\t\tFRO...', NULL, Array)
+#11 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php(59): Elgg\Http\DatabaseSessionHandler->read('9f6be54d5011688...')
+#12 [internal function]: Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy->read('9f6be54d5011688...')
+#13 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(154): session_start()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(321): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#15 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(256): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->getBag('attributes')
+#16 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(280): Symfony\Component\HttpFoundation\Session\Session->getBag('attributes')
+#17 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(73): Symfony\Component\HttpFoundation\Session\Session->getAttributeBag()
+#18 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/ElggSession.php(165): Symfony\Component\HttpFoundation\Session\Session->get('_elgg_msgs', Array)
+#19 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(122): ElggSession->get('_elgg_msgs', Array)
+#20 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(74): Elgg\SystemMessagesService->loadRegisters()
+#21 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/lib/views.php(354): Elgg\SystemMessagesService->count()
+#22 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/ExceptionHandler.php(121): elgg_view_page('Fatal Error.', '')
+#23 [internal function]: Elgg\Application\ExceptionHandler->__invoke(Object(DatabaseException))
+#24 {main}
+
+Next Doctrine\DBAL\Driver\PDOException: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:31
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(892): Doctrine\DBAL\Connection->getWrappedConnection()
+#4 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(441): Doctrine\DBAL\Connection->executeQuery('SELECT *\n\t\t\tFRO...', Array)
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(490): Elgg\Database->Elgg\{closure}()
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(446): Elgg\Database->trackQuery('SELECT *\n\t\t\tFRO...', Array, Object(Closure))
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(388): Elgg\Database->executeQuery('SELECT *\n\t\t\tFRO...', Object(Doctrine\DBAL\Connection), Array)
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(211): Elgg\Database->getResults('SELECT *\n\t\t\tFRO...', NULL, true, Array)
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Http/DatabaseSessionHandler.php(45): Elgg\Database->getDataRow('SELECT *\n\t\t\tFRO...', NULL, Array)
+#10 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php(59): Elgg\Http\DatabaseSessionHandler->read('9f6be54d5011688...')
+#11 [internal function]: Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy->read('9f6be54d5011688...')
+#12 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(154): session_start()
+#13 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(321): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(256): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->getBag('attributes')
+#15 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(280): Symfony\Component\HttpFoundation\Session\Session->getBag('attributes')
+#16 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(73): Symfony\Component\HttpFoundation\Session\Session->getAttributeBag()
+#17 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/ElggSession.php(165): Symfony\Component\HttpFoundation\Session\Session->get('_elgg_msgs', Array)
+#18 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(122): ElggSession->get('_elgg_msgs', Array)
+#19 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(74): Elgg\SystemMessagesService->loadRegisters()
+#20 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/lib/views.php(354): Elgg\SystemMessagesService->count()
+#21 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/ExceptionHandler.php(121): elgg_view_page('Fatal Error.', '')
+#22 [internal function]: Elgg\Application\ExceptionHandler->__invoke(Object(DatabaseException))
+#23 {main}
+
+Next Doctrine\DBAL\Exception\ConnectionException: An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php:97
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php(172): Doctrine\DBAL\Driver\AbstractMySQLDriver->convertException('An exception oc...', Object(Doctrine\DBAL\Driver\PDOException))
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php(159): Doctrine\DBAL\DBALException::wrapException(Object(Doctrine\DBAL\Driver\PDOMySql\Driver), Object(Doctrine\DBAL\Driver\PDOException), 'An exception oc...')
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(28): Doctrine\DBAL\DBALException::driverException(Object(Doctrine\DBAL\Driver\PDOMySql\Driver), Object(Doctrine\DBAL\Driver\PDOException))
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#4 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#5 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(892): Doctrine\DBAL\Connection->getWrappedConnection()
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(441): Doctrine\DBAL\Connection->executeQuery('SELECT *\n\t\t\tFRO...', Array)
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(490): Elgg\Database->Elgg\{closure}()
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(446): Elgg\Database->trackQuery('SELECT *\n\t\t\tFRO...', Array, Object(Closure))
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(388): Elgg\Database->executeQuery('SELECT *\n\t\t\tFRO...', Object(Doctrine\DBAL\Connection), Array)
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(211): Elgg\Database->getResults('SELECT *\n\t\t\tFRO...', NULL, true, Array)
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Http/DatabaseSessionHandler.php(45): Elgg\Database->getDataRow('SELECT *\n\t\t\tFRO...', NULL, Array)
+#12 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php(59): Elgg\Http\DatabaseSessionHandler->read('9f6be54d5011688...')
+#13 [internal function]: Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy->read('9f6be54d5011688...')
+#14 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(154): session_start()
+#15 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(321): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#16 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(256): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->getBag('attributes')
+#17 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(280): Symfony\Component\HttpFoundation\Session\Session->getBag('attributes')
+#18 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(73): Symfony\Component\HttpFoundation\Session\Session->getAttributeBag()
+#19 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/ElggSession.php(165): Symfony\Component\HttpFoundation\Session\Session->get('_elgg_msgs', Array)
+#20 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(122): ElggSession->get('_elgg_msgs', Array)
+#21 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(74): Elgg\SystemMessagesService->loadRegisters()
+#22 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/lib/views.php(354): Elgg\SystemMessagesService->count()
+#23 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/ExceptionHandler.php(121): elgg_view_page('Fatal Error.', '')
+#24 [internal function]: Elgg\Application\ExceptionHandler->__invoke(Object(DatabaseException))
+#25 {main}
+
+Next DatabaseException: An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php:448
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(388): Elgg\Database->executeQuery('SELECT *\n\t\t\tFRO...', Object(Doctrine\DBAL\Connection), Array)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(211): Elgg\Database->getResults('SELECT *\n\t\t\tFRO...', NULL, true, Array)
+#2 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Http/DatabaseSessionHandler.php(45): Elgg\Database->getDataRow('SELECT *\n\t\t\tFRO...', NULL, Array)
+#3 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php(59): Elgg\Http\DatabaseSessionHandler->read('9f6be54d5011688...')
+#4 [internal function]: Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy->read('9f6be54d5011688...')
+#5 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(154): session_start()
+#6 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(321): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#7 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(256): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->getBag('attributes')
+#8 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(280): Symfony\Component\HttpFoundation\Session\Session->getBag('attributes')
+#9 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(73): Symfony\Component\HttpFoundation\Session\Session->getAttributeBag()
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/ElggSession.php(165): Symfony\Component\HttpFoundation\Session\Session->get('_elgg_msgs', Array)
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(122): ElggSession->get('_elgg_msgs', Array)
+#12 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(74): Elgg\SystemMessagesService->loadRegisters()
+#13 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/lib/views.php(354): Elgg\SystemMessagesService->count()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/ExceptionHandler.php(121): elgg_view_page('Fatal Error.', '')
+#15 [internal function]: Elgg\Application\ExceptionHandler->__invoke(Object(DatabaseException))
+#16 {main}
+ {"exception":"[object] (DatabaseException(code: 0): An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php:448, Doctrine\\DBAL\\Exception\\ConnectionException(code: 0): An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php:97, Doctrine\\DBAL\\Driver\\PDOException(code: 1045): SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:31, PDOException(code: 1045): SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27)","sql":"SELECT *
+\t\t\tFROM elgglm_users_sessions
+\t\t\tWHERE session = :session_id","params":{":session_id":"9f6be54d5011688534508e1124ce88ad"}} {"backtrace":[],"process_id":20484,"memory_peak_usage":"2 MB","memory_usage":"2 MB","url":"/pages/view/58/scope","ip":"97.126.62.218","http_method":"GET","server":"social.elonara.com","referrer":"https://social.elonara.com/pages/view/61/elonara-big-picture"}
+
+[23-Oct-2021 16:10:27 America/New_York] [2021-10-23 16:10:27] ELGG.ERROR: Exception at time 1635019827:
+PDOException: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#4 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1109): Doctrine\DBAL\Connection->getWrappedConnection()
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(160): Doctrine\DBAL\Connection->exec('SET SESSION sql...')
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(127): Elgg\Database->connect('readwrite')
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(108): Elgg\Database->setupConnections()
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/Select.php(14): Elgg\Database->getConnection('read')
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/ConfigTable.php(154): Elgg\Database\Select::fromTable('config')
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/BootService.php(98): Elgg\Database\ConfigTable->getAll()
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(99): Elgg\BootService->boot(Object(Elgg\Di\ServiceProvider))
+#12 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(47): Elgg\Application\BootHandler->bootServices()
+#13 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(215): Elgg\Application\BootHandler->__invoke()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(474): Elgg\Application->bootCore()
+#15 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(360): Elgg\Application->run()
+#16 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(416): Elgg\Application::route(Object(Elgg\Http\Request))
+#17 /home/ljholida/public_html/social.elonara.com/index.php(8): Elgg\Application::index()
+#18 {main}
+
+Next Doctrine\DBAL\Driver\PDOException: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:31
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1109): Doctrine\DBAL\Connection->getWrappedConnection()
+#4 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(160): Doctrine\DBAL\Connection->exec('SET SESSION sql...')
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(127): Elgg\Database->connect('readwrite')
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(108): Elgg\Database->setupConnections()
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/Select.php(14): Elgg\Database->getConnection('read')
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/ConfigTable.php(154): Elgg\Database\Select::fromTable('config')
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/BootService.php(98): Elgg\Database\ConfigTable->getAll()
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(99): Elgg\BootService->boot(Object(Elgg\Di\ServiceProvider))
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(47): Elgg\Application\BootHandler->bootServices()
+#12 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(215): Elgg\Application\BootHandler->__invoke()
+#13 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(474): Elgg\Application->bootCore()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(360): Elgg\Application->run()
+#15 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(416): Elgg\Application::route(Object(Elgg\Http\Request))
+#16 /home/ljholida/public_html/social.elonara.com/index.php(8): Elgg\Application::index()
+#17 {main}
+
+Next Doctrine\DBAL\Exception\ConnectionException: An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php:97
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php(172): Doctrine\DBAL\Driver\AbstractMySQLDriver->convertException('An exception oc...', Object(Doctrine\DBAL\Driver\PDOException))
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php(159): Doctrine\DBAL\DBALException::wrapException(Object(Doctrine\DBAL\Driver\PDOMySql\Driver), Object(Doctrine\DBAL\Driver\PDOException), 'An exception oc...')
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(28): Doctrine\DBAL\DBALException::driverException(Object(Doctrine\DBAL\Driver\PDOMySql\Driver), Object(Doctrine\DBAL\Driver\PDOException))
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#4 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#5 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1109): Doctrine\DBAL\Connection->getWrappedConnection()
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(160): Doctrine\DBAL\Connection->exec('SET SESSION sql...')
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(127): Elgg\Database->connect('readwrite')
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(108): Elgg\Database->setupConnections()
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/Select.php(14): Elgg\Database->getConnection('read')
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/ConfigTable.php(154): Elgg\Database\Select::fromTable('config')
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/BootService.php(98): Elgg\Database\ConfigTable->getAll()
+#12 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(99): Elgg\BootService->boot(Object(Elgg\Di\ServiceProvider))
+#13 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(47): Elgg\Application\BootHandler->bootServices()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(215): Elgg\Application\BootHandler->__invoke()
+#15 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(474): Elgg\Application->bootCore()
+#16 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(360): Elgg\Application->run()
+#17 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(416): Elgg\Application::route(Object(Elgg\Http\Request))
+#18 /home/ljholida/public_html/social.elonara.com/index.php(8): Elgg\Application::index()
+#19 {main}
+ {"exception":"[object] (Doctrine\\DBAL\\Exception\\ConnectionException(code: 0): An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php:97, Doctrine\\DBAL\\Driver\\PDOException(code: 1045): SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:31, PDOException(code: 1045): SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27)"} {"backtrace":["[#11] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php:108","[#10] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/Select.php:14","[#9] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/ConfigTable.php:154","[#8] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/BootService.php:98","[#7] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php:99","[#6] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php:47","[#5] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php:215","[#4] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php:474","[#3] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php:360","[#2] /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php:416","[#1] /home/ljholida/public_html/social.elonara.com/index.php:8"],"process_id":20484,"memory_peak_usage":"2 MB","memory_usage":"2 MB","url":"/pages/view/58/scope","ip":"97.126.62.218","http_method":"GET","server":"social.elonara.com","referrer":"https://social.elonara.com/pages/view/61/elonara-big-picture"}
+
+[23-Oct-2021 16:10:27 America/New_York] [2021-10-23 16:10:27] ELGG.CRITICAL: Exception at time 1635019827:
+DatabaseException: Elgg couldn't connect to the database using the given credentials. Check the settings file. in /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php:171
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(127): Elgg\Database->connect('readwrite')
+#1 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(108): Elgg\Database->setupConnections()
+#2 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/Select.php(14): Elgg\Database->getConnection('read')
+#3 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database/ConfigTable.php(154): Elgg\Database\Select::fromTable('config')
+#4 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/BootService.php(98): Elgg\Database\ConfigTable->getAll()
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(99): Elgg\BootService->boot(Object(Elgg\Di\ServiceProvider))
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/BootHandler.php(47): Elgg\Application\BootHandler->bootServices()
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(215): Elgg\Application\BootHandler->__invoke()
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(474): Elgg\Application->bootCore()
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(360): Elgg\Application->run()
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application.php(416): Elgg\Application::route(Object(Elgg\Http\Request))
+#11 /home/ljholida/public_html/social.elonara.com/index.php(8): Elgg\Application::index()
+#12 {main}
+ {"exception":"[object] (DatabaseException(code: 0): Elgg couldn't connect to the database using the given credentials. Check the settings file. at /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php:171)","sql":null,"params":null} {"backtrace":[],"process_id":20484,"memory_peak_usage":"2 MB","memory_usage":"2 MB","url":"/pages/view/58/scope","ip":"97.126.62.218","http_method":"GET","server":"social.elonara.com","referrer":"https://social.elonara.com/pages/view/61/elonara-big-picture"}
+
+[23-Oct-2021 16:10:27 America/New_York] [2021-10-23 16:10:27] ELGG.NOTICE: failsafe/messages/exceptions/exception view does not exist.  {"process_id":20484,"memory_peak_usage":"2 MB","memory_usage":"2 MB","url":"/pages/view/58/scope","ip":"97.126.62.218","http_method":"GET","server":"social.elonara.com","referrer":"https://social.elonara.com/pages/view/61/elonara-big-picture"}
+
+[23-Oct-2021 16:10:27 America/New_York] [2021-10-23 16:10:27] ELGG.CRITICAL: Exception at time 1635019827:
+PDOException: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#4 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(892): Doctrine\DBAL\Connection->getWrappedConnection()
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(441): Doctrine\DBAL\Connection->executeQuery('SELECT *\n\t\t\tFRO...', Array)
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(490): Elgg\Database->Elgg\{closure}()
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(446): Elgg\Database->trackQuery('SELECT *\n\t\t\tFRO...', Array, Object(Closure))
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(388): Elgg\Database->executeQuery('SELECT *\n\t\t\tFRO...', Object(Doctrine\DBAL\Connection), Array)
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(211): Elgg\Database->getResults('SELECT *\n\t\t\tFRO...', NULL, true, Array)
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Http/DatabaseSessionHandler.php(45): Elgg\Database->getDataRow('SELECT *\n\t\t\tFRO...', NULL, Array)
+#11 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php(59): Elgg\Http\DatabaseSessionHandler->read('9f6be54d5011688...')
+#12 [internal function]: Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy->read('9f6be54d5011688...')
+#13 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(154): session_start()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(321): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#15 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(256): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->getBag('attributes')
+#16 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(280): Symfony\Component\HttpFoundation\Session\Session->getBag('attributes')
+#17 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(73): Symfony\Component\HttpFoundation\Session\Session->getAttributeBag()
+#18 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/ElggSession.php(165): Symfony\Component\HttpFoundation\Session\Session->get('_elgg_msgs', Array)
+#19 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(122): ElggSession->get('_elgg_msgs', Array)
+#20 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(74): Elgg\SystemMessagesService->loadRegisters()
+#21 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/lib/views.php(354): Elgg\SystemMessagesService->count()
+#22 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/ExceptionHandler.php(121): elgg_view_page('Fatal Error.', '')
+#23 [internal function]: Elgg\Application\ExceptionHandler->__invoke(Object(DatabaseException))
+#24 {main}
+
+Next Doctrine\DBAL\Driver\PDOException: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:31
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=loca...', 'ljholida_elgg74...', '7vx04yS![p', Array)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(892): Doctrine\DBAL\Connection->getWrappedConnection()
+#4 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(441): Doctrine\DBAL\Connection->executeQuery('SELECT *\n\t\t\tFRO...', Array)
+#5 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(490): Elgg\Database->Elgg\{closure}()
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(446): Elgg\Database->trackQuery('SELECT *\n\t\t\tFRO...', Array, Object(Closure))
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(388): Elgg\Database->executeQuery('SELECT *\n\t\t\tFRO...', Object(Doctrine\DBAL\Connection), Array)
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(211): Elgg\Database->getResults('SELECT *\n\t\t\tFRO...', NULL, true, Array)
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Http/DatabaseSessionHandler.php(45): Elgg\Database->getDataRow('SELECT *\n\t\t\tFRO...', NULL, Array)
+#10 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php(59): Elgg\Http\DatabaseSessionHandler->read('9f6be54d5011688...')
+#11 [internal function]: Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy->read('9f6be54d5011688...')
+#12 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(154): session_start()
+#13 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(321): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(256): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->getBag('attributes')
+#15 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(280): Symfony\Component\HttpFoundation\Session\Session->getBag('attributes')
+#16 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(73): Symfony\Component\HttpFoundation\Session\Session->getAttributeBag()
+#17 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/ElggSession.php(165): Symfony\Component\HttpFoundation\Session\Session->get('_elgg_msgs', Array)
+#18 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(122): ElggSession->get('_elgg_msgs', Array)
+#19 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(74): Elgg\SystemMessagesService->loadRegisters()
+#20 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/lib/views.php(354): Elgg\SystemMessagesService->count()
+#21 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/ExceptionHandler.php(121): elgg_view_page('Fatal Error.', '')
+#22 [internal function]: Elgg\Application\ExceptionHandler->__invoke(Object(DatabaseException))
+#23 {main}
+
+Next Doctrine\DBAL\Exception\ConnectionException: An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php:97
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php(172): Doctrine\DBAL\Driver\AbstractMySQLDriver->convertException('An exception oc...', Object(Doctrine\DBAL\Driver\PDOException))
+#1 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php(159): Doctrine\DBAL\DBALException::wrapException(Object(Doctrine\DBAL\Driver\PDOMySql\Driver), Object(Doctrine\DBAL\Driver\PDOException), 'An exception oc...')
+#2 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(28): Doctrine\DBAL\DBALException::driverException(Object(Doctrine\DBAL\Driver\PDOMySql\Driver), Object(Doctrine\DBAL\Driver\PDOException))
+#3 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(362): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'ljholida_elgg74...', '7vx04yS![p', Array)
+#4 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(1473): Doctrine\DBAL\Connection->connect()
+#5 /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(892): Doctrine\DBAL\Connection->getWrappedConnection()
+#6 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(441): Doctrine\DBAL\Connection->executeQuery('SELECT *\n\t\t\tFRO...', Array)
+#7 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(490): Elgg\Database->Elgg\{closure}()
+#8 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(446): Elgg\Database->trackQuery('SELECT *\n\t\t\tFRO...', Array, Object(Closure))
+#9 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(388): Elgg\Database->executeQuery('SELECT *\n\t\t\tFRO...', Object(Doctrine\DBAL\Connection), Array)
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(211): Elgg\Database->getResults('SELECT *\n\t\t\tFRO...', NULL, true, Array)
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Http/DatabaseSessionHandler.php(45): Elgg\Database->getDataRow('SELECT *\n\t\t\tFRO...', NULL, Array)
+#12 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php(59): Elgg\Http\DatabaseSessionHandler->read('9f6be54d5011688...')
+#13 [internal function]: Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy->read('9f6be54d5011688...')
+#14 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(154): session_start()
+#15 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(321): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#16 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(256): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->getBag('attributes')
+#17 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(280): Symfony\Component\HttpFoundation\Session\Session->getBag('attributes')
+#18 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(73): Symfony\Component\HttpFoundation\Session\Session->getAttributeBag()
+#19 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/ElggSession.php(165): Symfony\Component\HttpFoundation\Session\Session->get('_elgg_msgs', Array)
+#20 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(122): ElggSession->get('_elgg_msgs', Array)
+#21 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(74): Elgg\SystemMessagesService->loadRegisters()
+#22 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/lib/views.php(354): Elgg\SystemMessagesService->count()
+#23 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/ExceptionHandler.php(121): elgg_view_page('Fatal Error.', '')
+#24 [internal function]: Elgg\Application\ExceptionHandler->__invoke(Object(DatabaseException))
+#25 {main}
+
+Next DatabaseException: An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) in /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php:448
+Stack trace:
+#0 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(388): Elgg\Database->executeQuery('SELECT *\n\t\t\tFRO...', Object(Doctrine\DBAL\Connection), Array)
+#1 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php(211): Elgg\Database->getResults('SELECT *\n\t\t\tFRO...', NULL, true, Array)
+#2 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Http/DatabaseSessionHandler.php(45): Elgg\Database->getDataRow('SELECT *\n\t\t\tFRO...', NULL, Array)
+#3 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php(59): Elgg\Http\DatabaseSessionHandler->read('9f6be54d5011688...')
+#4 [internal function]: Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy->read('9f6be54d5011688...')
+#5 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(154): session_start()
+#6 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php(321): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->start()
+#7 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(256): Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage->getBag('attributes')
+#8 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(280): Symfony\Component\HttpFoundation\Session\Session->getBag('attributes')
+#9 /home/ljholida/public_html/social.elonara.com/vendor/symfony/http-foundation/Session/Session.php(73): Symfony\Component\HttpFoundation\Session\Session->getAttributeBag()
+#10 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/ElggSession.php(165): Symfony\Component\HttpFoundation\Session\Session->get('_elgg_msgs', Array)
+#11 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(122): ElggSession->get('_elgg_msgs', Array)
+#12 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/SystemMessagesService.php(74): Elgg\SystemMessagesService->loadRegisters()
+#13 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/lib/views.php(354): Elgg\SystemMessagesService->count()
+#14 /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Application/ExceptionHandler.php(121): elgg_view_page('Fatal Error.', '')
+#15 [internal function]: Elgg\Application\ExceptionHandler->__invoke(Object(DatabaseException))
+#16 {main}
+ {"exception":"[object] (DatabaseException(code: 0): An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/elgg/elgg/engine/classes/Elgg/Database.php:448, Doctrine\\DBAL\\Exception\\ConnectionException(code: 0): An exception occurred in driver: SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/AbstractMySQLDriver.php:97, Doctrine\\DBAL\\Driver\\PDOException(code: 1045): SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:31, PDOException(code: 1045): SQLSTATE[28000] [1045] Access denied for user 'ljholida_elgg744'@'localhost' (using password: YES) at /home/ljholida/public_html/social.elonara.com/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27)","sql":"SELECT *
+\t\t\tFROM elgglm_users_sessions
+\t\t\tWHERE session = :session_id","params":{":session_id":"9f6be54d5011688534508e1124ce88ad"}} {"backtrace":[],"process_id":20484,"memory_peak_usage":"2 MB","memory_usage":"2 MB","url":"/pages/view/58/scope","ip":"97.126.62.218","http_method":"GET","server":"social.elonara.com","referrer":"https://social.elonara.com/pages/view/61/elonara-big-picture"}
+
+[23-Oct-2021 20:22:04 UTC] PHP Notice:  Constant PASSWORD_DEFAULT already defined in /home/ljholida/public_html/social.elonara.com/update_pass.php on line 17
